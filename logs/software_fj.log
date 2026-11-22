@@ -1,0 +1,70 @@
+2026-11-22 14:03:02 | INFO     | === Sistema Software FJ iniciado ===
+2026-11-22 14:03:02 | INFO     | Cliente registrado: Cliente CLI-001: Ana Gómez | Doc: ******5678 | ana@correo.com
+2026-11-22 14:03:02 | DEBUG    | Operación 1 finalizada: Registrar cliente válido (Ana Gómez)
+2026-11-22 14:03:02 | INFO     | Cliente registrado: Cliente CLI-002: Luis Pérez | Doc: ****3456 | luis.perez@mail.co
+2026-11-22 14:03:02 | DEBUG    | Operación 2 finalizada: Registrar cliente válido (Luis Pérez)
+2026-11-22 14:03:02 | ERROR    | Registro de cliente rechazado: [ERR-DATO] Dato inválido en 'correo': 'marta-correo.com'. Formato de correo incorrecto.
+2026-11-22 14:03:02 | ERROR    | Operación 3 fallida: [ERR-DATO] Dato inválido en 'correo': 'marta-correo.com'. Formato de correo incorrecto. | causa: None
+2026-11-22 14:03:02 | DEBUG    | Operación 3 finalizada: Registrar cliente con correo inválido
+2026-11-22 14:03:02 | ERROR    | Registro de cliente rechazado: [ERR-PARAM] Falta el parámetro obligatorio 'nombre'.
+2026-11-22 14:03:02 | ERROR    | Operación 4 fallida: [ERR-PARAM] Falta el parámetro obligatorio 'nombre'. | causa: None
+2026-11-22 14:03:02 | DEBUG    | Operación 4 finalizada: Registrar cliente sin nombre
+2026-11-22 14:03:02 | ERROR    | Operación 5 fallida: [ERR-DUPLICADO] Ya existe un cliente con documento 1012345678. | causa: None
+2026-11-22 14:03:02 | DEBUG    | Operación 5 finalizada: Registrar cliente duplicado (mismo documento de Ana)
+2026-11-22 14:03:02 | INFO     | Servicio creado: Sala 'Sala Juntas' (SRV-001) - capacidad 10 - $50,000/h
+2026-11-22 14:03:02 | DEBUG    | Operación 6 finalizada: Crear servicio Sala de Juntas
+2026-11-22 14:03:02 | INFO     | Servicio creado: Equipo 'Portatiles' (SRV-002) - Portátil - 5 und. - $15,000/h
+2026-11-22 14:03:02 | DEBUG    | Operación 7 finalizada: Crear servicio Alquiler de Portátiles
+2026-11-22 14:03:02 | INFO     | Servicio creado: Asesoría 'Ciberseguridad' (SRV-003) - Seguridad - nivel experto - $80,000/h
+2026-11-22 14:03:02 | DEBUG    | Operación 8 finalizada: Crear servicio Asesoría en Ciberseguridad (experto)
+2026-11-22 14:03:02 | ERROR    | Operación 9 fallida: [ERR-DATO] Dato inválido en 'tarifa_hora': -100. Debe ser un número mayor que cero. | causa: None
+2026-11-22 14:03:02 | DEBUG    | Operación 9 finalizada: Crear servicio con tarifa negativa
+2026-11-22 14:03:02 | ERROR    | Operación 10 fallida: [ERR-DATO] Dato inválido en 'tipo': 'transporte'. Tipos válidos: ['sala', 'equipo', 'asesoria']. | causa: None
+2026-11-22 14:03:02 | DEBUG    | Operación 10 finalizada: Crear servicio de tipo inexistente
+2026-11-22 14:03:02 | ERROR    | Operación 11 fallida: [ERR-DATO] Dato inválido en 'nivel': 'master'. Use uno de: ['junior', 'senior', 'experto']. | causa: None
+2026-11-22 14:03:02 | DEBUG    | Operación 11 finalizada: Crear asesoría con nivel no permitido
+2026-11-22 14:03:02 | INFO     | Servicio creado: Equipo 'Proyectores' (SRV-006) - Proyector - 0 und. - $10,000/h
+2026-11-22 14:03:02 | DEBUG    | Operación 12 finalizada: Crear equipo Proyectores sin unidades (queda no disponible)
+2026-11-22 14:03:02 | DEBUG    | Operación 13 finalizada: Cotizar sala 3 h (solo horas, con IVA)
+2026-11-22 14:03:02 | DEBUG    | Operación 14 finalizada: Cotizar asesoría 2 h sin IVA y 10 % desc. (con tupla)
+2026-11-22 14:03:02 | DEBUG    | Operación 15 finalizada: Cotizar 3 portátiles por 4 h (con diccionario)
+2026-11-22 14:03:02 | ERROR    | Operación 16 fallida: [ERR-CALCULO] Descuento inválido: 1.5. Debe estar entre 0 y 0.99. | causa: None
+2026-11-22 14:03:02 | DEBUG    | Operación 16 finalizada: Cotizar con descuento del 150 %
+2026-11-22 14:03:02 | INFO     | Reserva creada: Reserva RES-001: Ana Gómez -> Sala Juntas | 4 h | PENDIENTE | sin calcular
+2026-11-22 14:03:02 | INFO     | Reserva RES-001 confirmada. Costo: $238,000.00
+2026-11-22 14:03:02 | INFO     | Reserva RES-001 procesada. Pago $300,000.00, cambio $62,000.00
+2026-11-22 14:03:02 | DEBUG    | Intento de procesamiento de RES-001 finalizado (estado: PROCESADA).
+2026-11-22 14:03:02 | DEBUG    | Operación 17 finalizada: Reserva exitosa completa (crear, confirmar y pagar)
+2026-11-22 14:03:02 | INFO     | Reserva creada: Reserva RES-002: Luis Pérez -> Ciberseguridad | 2 h | PENDIENTE | sin calcular
+2026-11-22 14:03:02 | INFO     | Reserva RES-002 confirmada. Costo: $323,680.00
+2026-11-22 14:03:02 | DEBUG    | Operación 18 finalizada: Reserva de asesoría con 15 % de descuento
+2026-11-22 14:03:02 | INFO     | Reserva creada: Reserva RES-003: Luis Pérez -> Sala Juntas | 2 h | PENDIENTE | sin calcular
+2026-11-22 14:03:02 | ERROR    | Fallo al confirmar RES-003: [ERR-DATO] Dato inválido en 'personas': 25. La sala admite máximo 10.
+2026-11-22 14:03:02 | ERROR    | Operación 19 fallida: [ERR-RESERVA] No se pudo confirmar la reserva RES-003. | causa: [ERR-DATO] Dato inválido en 'personas': 25. La sala admite máximo 10.
+2026-11-22 14:03:02 | DEBUG    | Operación 19 finalizada: Reserva que excede la capacidad de la sala
+2026-11-22 14:03:02 | INFO     | Reserva creada: Reserva RES-004: Ana Gómez -> Proyectores | 3 h | PENDIENTE | sin calcular
+2026-11-22 14:03:02 | ERROR    | Fallo al confirmar RES-004: [ERR-SERV] El servicio 'Proyectores' no está disponible.
+2026-11-22 14:03:02 | ERROR    | Operación 20 fallida: [ERR-RESERVA] No se pudo confirmar la reserva RES-004. | causa: [ERR-SERV] El servicio 'Proyectores' no está disponible.
+2026-11-22 14:03:02 | DEBUG    | Operación 20 finalizada: Reserva de servicio no disponible (Proyectores)
+2026-11-22 14:03:02 | ERROR    | Operación 21 fallida: [ERR-RESERVA] No se pudo crear la reserva: datos de origen incorrectos. | causa: [ERR-DATO] Dato inválido en 'documento': '99999999'. Cliente no encontrado.
+2026-11-22 14:03:02 | DEBUG    | Operación 21 finalizada: Reserva para cliente inexistente
+2026-11-22 14:03:02 | INFO     | Reserva creada: Reserva RES-005: Ana Gómez -> Ciberseguridad | 20 h | PENDIENTE | sin calcular
+2026-11-22 14:03:02 | ERROR    | Fallo al confirmar RES-005: [ERR-DATO] Dato inválido en 'horas': 20. Debe estar entre 1 y 8.
+2026-11-22 14:03:02 | ERROR    | Operación 22 fallida: [ERR-RESERVA] No se pudo confirmar la reserva RES-005. | causa: [ERR-DATO] Dato inválido en 'horas': 20. Debe estar entre 1 y 8.
+2026-11-22 14:03:02 | DEBUG    | Operación 22 finalizada: Reserva con duración inválida (20 h de asesoría)
+2026-11-22 14:03:02 | INFO     | Reserva creada: Reserva RES-006: Luis Pérez -> Portatiles | 5 h | PENDIENTE | sin calcular
+2026-11-22 14:03:02 | WARNING  | Reserva RES-006 cancelada. Motivo: El cliente cambió de fecha
+2026-11-22 14:03:02 | ERROR    | Operación 23 fallida: [ERR-OPERACION] La reserva RES-006 ya está CANCELADA y no se puede cancelar. | causa: None
+2026-11-22 14:03:02 | DEBUG    | Operación 23 finalizada: Cancelar una reserva dos veces
+2026-11-22 14:03:02 | INFO     | Reserva creada: Reserva RES-007: Luis Pérez -> Portatiles | 2 h | PENDIENTE | sin calcular
+2026-11-22 14:03:02 | INFO     | Reserva RES-007 confirmada. Costo: $59,500.00
+2026-11-22 14:03:02 | ERROR    | Error al procesar RES-007: [ERR-RESERVA] Pago insuficiente: $1000 para un costo de $59,500.00.
+2026-11-22 14:03:02 | DEBUG    | Intento de procesamiento de RES-007 finalizado (estado: CONFIRMADA).
+2026-11-22 14:03:02 | ERROR    | Operación 24 fallida: [ERR-RESERVA] Pago insuficiente: $1000 para un costo de $59,500.00. | causa: None
+2026-11-22 14:03:02 | DEBUG    | Operación 24 finalizada: Procesar pago insuficiente
+2026-11-22 14:03:02 | INFO     | Reserva creada: Reserva RES-008: Ana Gómez -> Sala Juntas | 1 h | PENDIENTE | sin calcular
+2026-11-22 14:03:02 | ERROR    | Error al procesar RES-008: [ERR-OPERACION] La reserva RES-008 no está confirmada (estado: PENDIENTE).
+2026-11-22 14:03:02 | DEBUG    | Intento de procesamiento de RES-008 finalizado (estado: PENDIENTE).
+2026-11-22 14:03:02 | ERROR    | Operación 25 fallida: [ERR-OPERACION] La reserva RES-008 no está confirmada (estado: PENDIENTE). | causa: None
+2026-11-22 14:03:02 | DEBUG    | Operación 25 finalizada: Procesar reserva sin confirmar
+2026-11-22 14:03:02 | INFO     | === Fin de la simulación: {'exitosas': 11, 'fallidas': 14} ===
